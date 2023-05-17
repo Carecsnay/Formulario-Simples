@@ -6,7 +6,7 @@
 }
 
 form {
-    margin: 20% auto;
+    margin: 120px auto;
     padding: 20px;
     width: 700px;
     display: flex;
@@ -26,31 +26,115 @@ form {
     font-size: 30px;
 }
 
-.titleBar {
+.titleBar, .footerBar {
     height: 4px;
     width: 550px;
-    background-color: #019201;
-    margin: 10px 0;
+    background-color: #15b915;
+    margin: 10px 0 20px 0;
 }
 
-.input{
-    width: 225px;
+.input {
+    width: 260px;
     height: 30px;
     border-radius: 5px;
     border: #c3c3c3 1px solid;
     padding: 7px;
-    
+
     margin-bottom: 10px;
     flex-direction: row;
 }
 
-.container:nth-child(2) {
+.containerHalf {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 550px;
 }
 
-.containerUserName, .userName {
+.containerFull,
+.userName,
+.email {
     width: 550px;
+}
+
+form div:nth-child(6) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.termsButton,
+.terms {
+    width: fit-content;
+}
+
+.buttonAgree {
+    padding: 7px 10px;
+    border: none;
+    background-color: #d8d8d8;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.termsButton {
+    padding: 3px;
+    border-radius: 4px;
+    background-color: #6767ec;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+}
+.buttonAgree:hover {
+    background-color: #15b915;
+    transition: .6s all;
+    color: #ffffff;
+}
+
+.termsButton:hover {
+    background-color: #454586;
+    transition: .8s all;
+}
+
+.terms a {
+    color: #6767ec;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    color: #000000;
+    border-bottom: 1px solid #000000;
+    transition: .5s all;
+}
+
+form div:nth-child(7) {
+    display: flex;
+    flex-direction: column;
+}
+
+.registerButton, .sign-in {
+    width: 260px;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.registerButton {
+    background-color: #6767ec;
+}
+
+.sign-in {
+    background-color: #15b915;
+}
+
+.registerButton:hover {
+    background-color: #454586;
+    transition: .8s all;
+}
+
+.sign-in:hover {
+    transition: .8s all;
+    background-color: #128e12;
 }
