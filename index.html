@@ -17,27 +17,26 @@
         </div>
         <div class="containerHalf">
             <div>
-                <input class="name input" type="text" placeholder="First Name">
+                <input class="name input" type="text" placeholder="First Name" required value="Bruno">
             </div>
             <div>
-                <input class="lastName input" type="text" placeholder="Last Name">
+                <input class="lastName input" type="text" placeholder="Last Name" required value="Benicio">
             </div>
         </div>
         <div class="containerFull">
             <div>
-                <input class="userName input" type="text" placeholder="User Name">
+                <input class="userName input" type="text" placeholder="User Name" required value="Bruno#1223">
             </div>
         </div>
-
         <div class="containerFull">
-                <input class="email input" type="email" placeholder="Email Address">
+            <input class="email input" type="email" placeholder="Email Address" required value="bruno123@dev.com">
         </div>
         <div class="containerHalf">
             <div>
-                <input class="password input" type="password" placeholder="Password">
+                <input class="password input" type="password" placeholder="Password" required>
             </div>
             <div>
-                <input class="cPassword input" type="password" placeholder="Confirm Password">
+                <input class="cPassword input" type="password" placeholder="Confirm Password" required>
             </div>
         </div>
         <div class="containerFull">
@@ -45,11 +44,10 @@
                 <button class="buttonAgree">I Agree</button>
             </div>
             <div class="terms">
-                By clicking <button class="termsButton">Register</button> you agree to the <a href="/#">Terms and
+                By clicking <button class="termsButton">Register</button> you agree to the <a href="">Terms and
                     Conditions</a>
             </div>
         </div>
-
         </div>
         <div class="containerFull">
             <div class="footerBar"></div>
@@ -58,10 +56,24 @@
                 <button class="sign-in">Sign In</button>
             </div>
         </div>
-
         </div>
     </form>
 
+    <script>
+        // Validação de Senha
+        const password = document.querySelector('.password');
+        const cPassword = document.querySelector('.cPassword');
+        password.addEventListener("change", validatePassword);
+        cPassword.addEventListener("keyup", validatePassword);
+
+        function validatePassword() {
+            if (password.value !== cPassword.value) {
+                cPassword.setCustomValidity("As senhas informadas não coincidem.");
+            } else {
+                cPassword.setCustomValidity("");
+            }
+        }
+    </script>
 </body>
 
 </html>
