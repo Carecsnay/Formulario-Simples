@@ -1,4 +1,4 @@
-<h1 align="center">Awax</h1>
+<h1 align="center">Formulário Simples</h1>
 
 <p align="center">
   <a href="#-Deployment">Deployment</a>&nbsp;&nbsp;|&nbsp;&nbsp;
